@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Quando&display=swap");
+@media all and (min-width: 320px) and (max-width: 780px) {
+  body {
+    background-color: burlywood;
+  }
+}
+* {
+  margin: 0;
+}
+
+#header {
+  position: fixed;
+  display: flex;
+  align-items: center;
+}
+
+#header-img {
+  width: 10vw;
+}
+
+#nav-bar {
+  display: inline;
+}
+
+#sect1 {
+  padding-top: 1000px;
+}
+
+/*# sourceMappingURL=style.css.map */
