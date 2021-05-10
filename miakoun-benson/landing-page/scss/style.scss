@@ -1,31 +1,405 @@
 @use 'color';
-@import url('https://fonts.googleapis.com/css2?family=Quando&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap');
 
 @media all and (min-width: 320px) and (max-width: 780px) {
     body {
-        background-color: burlywood;
+        background-color: black;
     }
 }
 
 * {
     margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+    transition-duration: 300ms;
 }
 
+// *:hover {
+//     // cursor: default;
+// }
+
+// body, html {
+//     height: 100%;
+// }
+
+// .bg {
+//     background-image: url(../assets/mars.jpg);
+//     background-size: 100%;
+// }
+
+// body {
+    
+//     background-size:contain;
+// }
+
 #header {
+    padding-top: 16px;
+    margin-inline: 20px;
     position: fixed;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    transition-duration: 300ms;
 }
 
 #header-img {
-    width: 10vw;
-
+    // justify-self: flex-start;
+    width: 80px;
 }
 
 #nav-bar {
-    display: inline;
+    // justify-self: flex-end;
+    // display: flex;
+    // justify-items: space-evenly;
+    // width: 100px;
+}
+
+.nav-link {
+    padding-inline: 10px;
+    font-weight: 300;
+    font-size: 13px;
+}
+
+.nav-link:hover {
+    font-weight: 500;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+#header-right {
+    width: 100px;
+    background-image: url("../assets/ham.svg");
+    background-size: 100px;
+
+}
+
+// a:hover {
+//     color: orange;
+// }
+
+// #nav-bar {
+//     display: inline;
+// }
+
+.sect {
+    background-size:cover;
+    background-position:center;
+    height: 100vh;
+    cursor: default;
+}
+
+#sect0 {
+    background-image: url(../assets/mercury2.png);
 }
 
 #sect1 {
-    padding-top: 1000px;
+    background-image: url(../assets/venus.jpg);
 }
+
+#sect2 {
+    background-image: url(../assets/earth.jpg);
+}
+
+#sect3 {
+    background-image: url(../assets/moon.jpg);
+}
+
+#sect4 {
+    background-image: url(../assets/mars2.jpeg);
+}
+
+#sect5 {
+    background-image: url(../assets/jupiter.jpg);
+}
+
+#sect6 {
+    background-image: url(../assets/saturn.jpg);
+}
+
+#sect7 {
+    background-image: url(../assets/uranus.jpeg);
+}
+
+#sect8 {
+    background-image: url(../assets/neptune.jpg);
+}
+
+#sect9 {
+    background-image: url(../assets/pluto.jpg);
+}
+
+#mercury-text {
+    width: 24vw;
+    padding-top: 18vh;
+    padding-left: 5vw;
+    font-size: 1.2vw;
+}
+
+#mercury-box {
+    padding: 1vw;
+    background-color: rgba(0, 0, 0, 0);
+    height: 45vh;
+    box-shadow: 0 0 10px 5px;
+}
+
+#venus-text {
+    width: 24vw;
+    padding-top: 18vh;
+    padding-left: 5vw;
+    font-size: 1.2vw;
+}
+
+#venus-box {
+    padding: 1vw;
+    background-color: rgba(0, 0, 0, 0);
+    height: 45vh;
+    box-shadow: 0 0 10px 5px;
+}
+
+#earth-text {
+    width: 24vw;
+    padding-top: 18vh;
+    padding-left: 5vw;
+    font-size: 1.2vw;
+}
+
+#earth-box {
+    padding: 1vw;
+    background-color: rgba(0, 0, 0, 0);
+    height: 45vh;
+    box-shadow: 0 0 10px 5px;
+}
+
+#moon-text {
+    width: 24vw;
+    padding-top: 18vh;
+    padding-left: 5vw;
+    font-size: 1.2vw;
+}
+
+#moon-box {
+    padding: 1vw;
+    background-color: rgba(0, 0, 0, 0);
+    height: 45vh;
+    box-shadow: 0 0 10px 5px;
+}
+
+#mars-text {
+    width: 24vw;
+    padding-top: 18vh;
+    padding-left: 5vw;
+    font-size: 1.2vw;
+}
+
+#mars-box {
+    padding: 1vw;
+    background-color: rgba(0, 0, 0, 0);
+    height: 45vh;
+    box-shadow: 0 0 10px 5px;
+}
+
+#jupiter-text {
+    width: 24vw;
+    padding-top: 18vh;
+    padding-left: 5vw;
+    font-size: 1.2vw;
+    color: black;
+}
+
+#jupiter-box {
+    padding: 1vw;
+    background-color: rgba(0, 0, 0, 0);
+    height: 45vh;
+    box-shadow: 0 0 10px 5px;
+}
+
+#saturn-text {
+    width: 24vw;
+    padding-top: 18vh;
+    padding-left: 5vw;
+    font-size: 1.2vw;
+}
+
+#saturn-box {
+    padding: 1vw;
+    background-color: rgba(0, 0, 0, 0);
+    height: 45vh;
+    box-shadow: 0 0 10px 5px;
+}
+
+#uranus-text {
+    width: 24vw;
+    padding-top: 18vh;
+    padding-left: 5vw;
+    font-size: 1.2vw;
+}
+
+#uranus-box {
+    padding: 1vw;
+    background-color: rgba(0, 0, 0, 0);
+    height: 45vh;
+    box-shadow: 0 0 10px 5px;
+}
+
+#neptune-text {
+    width: 24vw;
+    padding-top: 18vh;
+    padding-left: 5vw;
+    font-size: 1.2vw;
+}
+
+#neptune-box {
+    padding: 1vw;
+    background-color: rgba(0, 0, 0, 0);
+    height: 45vh;
+    box-shadow: 0 0 10px 5px;
+}
+
+#pluto-text {
+    width: 24vw;
+    padding-top: 18vh;
+    padding-left: 5vw;
+    font-size: 1.2vw;
+}
+
+#pluto-box {
+    padding: 1vw;
+    background-color: rgba(0, 0, 0, 0);
+    height: 45vh;
+    box-shadow: 0 0 10px 5px;
+}
+
+h2, p{
+    color: white;
+}
+
+h2 {
+    padding-bottom: 5vh;
+    font-size: 4vw;
+}
+
+p {
+    padding-block: 3px;
+}
+
+#btn-1, #btn-3, #btn-5, #btn-7, #btn-9 {
+    margin-top: 5vh;
+}
+
+.btn {
+    height: 6vh;
+    width: 100%;
+    border: none;
+    color: white;
+    background-color: #a49069;
+    margin-block: 5px;
+    font-weight: 600;
+    border-radius: 4px;
+    box-shadow: inset 0 0 0 0 #fff5da;   
+    transition: ease-out 0.3s;
+    font-size: 1vw;
+    outline: none;
+}
+
+.btn:hover {
+    box-shadow: inset 300px 0 0 0 #fff5da;
+    cursor: pointer;
+    color: black;
+}
+
+#btn-3, #btn-4 {
+    background-color: #ed7c04;
+}
+
+#btn-5, #btn-6 {
+    background-color: #19a50d;
+}
+
+#btn-7, #btn-8 {
+    background-color: #8d8c91;
+}
+
+#btn-9, #btn-10 {
+    background-color: #bc4633;
+}
+
+#btn-11, #btn-12 {
+    background-color: #9b7f01;
+}
+
+#btn-13, #btn-14 {
+    background-color: #a25497;
+}
+
+#btn-15, #btn-16 {
+    background-color: #1b80be;
+}
+
+#btn-17, #btn-18 {
+    background-color: #24409b;
+}
+
+#btn-19, #btn-20 {
+    background-color: #9b3b42;
+}
+
+#form {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    padding: 20px;
+}
+
+#email-label {
+    padding-inline: 5px;
+}
+
+#email {
+    height: 4vh;
+    margin-right: -5px;
+    width: 20vw;
+    outline: none;
+}
+
+#submit {
+    padding-inline: 5px;
+    height: 5vh;
+    width: 5vw;
+    border: none;
+    color: white;
+    background-color: #9b3b42;
+    margin-block: 5px;
+    font-weight: 600;
+    border-radius: 4px;
+    box-shadow: inset 0 0 0 0 #fff5da;   
+    transition: ease-out 0.3s;
+    font-size: 1vw;
+    outline: none;
+}
+
+#email-label {
+    color: white;
+}
+
+// #btn-3:hover, #btn-4:hover {
+//     box-shadow: inset 300px 0 0 0 #fff5da;
+// }
+
+body {
+    scroll-snap-type: y mandatory;
+}
+
+.sect {
+    scroll-snap-align: start;
+}
+
+// #ham {
+//     height: 2vw;
+//     align-self: flex-end
+// }
