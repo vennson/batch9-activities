@@ -51,3 +51,19 @@ if (username !== 'ben') {
 } else {
     console.log('log in')
 }
+
+
+// truthy
+javascript
+ var user = {
+     name: "Bruce",
+     email: null,
+     friends: ["Aflred", "Robin"],
+     address: {
+         street: "123 wayne manor",
+         city: "Gotham"
+     },
+     id: 0,
+     nickname: undefined
+ }
+
