@@ -18,8 +18,10 @@ var fridge = ['milk', 'candy', 'choco', 'grapes', 'orange', 'chicharon']
 
 function moveUp(){
     //your code
-    buyList.push(fridge.pop())
-    refresh()
+    if (fridge.length > 0) {
+        buyList.push(fridge.pop())
+        refresh()
+    }
 }
 
 upButton.addEventListener('click', moveUp)
@@ -29,8 +31,10 @@ upButton.addEventListener('click', moveUp)
 
 function moveDown(){
     //your code
-    fridge.push(buyList.pop())
-    refresh()
+    if (buyList.length > 0) {
+        fridge.push(buyList.pop())
+        refresh()
+    }
 }
 
 downButton.addEventListener('click', moveDown)
