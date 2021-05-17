@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;300;400;500;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -7,12 +7,12 @@
 
 html {
   font-size: 20px;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Roboto Mono", monospace;
 }
 
 body {
   display: flex;
-  background-image: url(../assets/bg.png);
+  background-image: url(../assets/bg3.jpg);
   background-size: cover;
   height: 100vh;
 }
@@ -22,6 +22,10 @@ body {
   flex-direction: column;
   height: 100vh;
   width: 100%;
+  font-weight: 300;
+  font-size: 16px;
+  color: white;
+  opacity: 0.85;
 }
 
 #weather {
@@ -34,6 +38,8 @@ body {
   align-items: center;
   letter-spacing: 0;
   line-height: 1.6rem;
+  color: white;
+  text-shadow: 0px 0px 50px blue;
 }
 
 #time-div {
@@ -42,19 +48,44 @@ body {
   font-size: 100px;
 }
 
+.digit {
+  text-shadow: 0px 0px 50px blue;
+}
+
 #period {
-  font-size: 20px;
+  margin-left: 10px;
+  font-size: 25px;
 }
 
 #date-div {
   font-size: 30px;
-  font-weight: 400;
+  font-weight: 700;
+}
+
+#name, .blank {
+  margin-top: 20px;
+  border-inline: none;
+  border-top: none;
+  border-bottom-color: white;
+  border-bottom-width: 1px;
+  border-radius: 0;
+  border-color: #ffffffc4;
+  width: 310px;
+  outline: none;
+  background-color: transparent;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 300;
+  font-family: "Roboto Mono", monospace;
 }
 
 #name-div {
   display: flex;
   flex-direction: column;
   align-items: center;
+  -webkit-text-stroke: 0.1px blue;
+  text-shadow: 0px 0px 50px blue;
 }
 
 #focus-div {
@@ -63,9 +94,14 @@ body {
   align-items: center;
 }
 
+#focus {
+  width: 620px;
+}
+
 #footer {
   margin-top: auto;
-  margin-bottom: 0;
+  margin-bottom: 5px;
+  margin-inline: 5px;
   display: flex;
   justify-content: space-between;
 }
