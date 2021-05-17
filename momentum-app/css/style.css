@@ -1,4 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -6,8 +12,8 @@
 }
 
 html {
-  font-size: 20px;
-  font-family: "Roboto Mono", monospace;
+  font-size: 15px;
+  font-family: "Montserrat", sans-serif;
 }
 
 body {
@@ -23,9 +29,20 @@ body {
   height: 100vh;
   width: 100%;
   font-weight: 300;
-  font-size: 16px;
   color: white;
   opacity: 0.85;
+}
+
+.hide {
+  display: none;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+li {
+  list-style-type: none;
 }
 
 #weather {
@@ -43,13 +60,16 @@ body {
 }
 
 #time-div {
-  margin-top: 30vh;
+  margin-top: 43vh;
+  margin-bottom: 1vh;
   font-weight: 700;
-  font-size: 100px;
+  font-size: 130px;
+  font-family: "Montserrat", sans-serif;
 }
 
 .digit {
   text-shadow: 0px 0px 50px blue;
+  font-family: "Roboto Mono", monospace;
 }
 
 #period {
@@ -60,6 +80,14 @@ body {
 #date-div {
   font-size: 30px;
   font-weight: 700;
+}
+
+#name-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  -webkit-text-stroke: 0.1px blue;
+  text-shadow: 0px 0px 50px blue;
 }
 
 #name, .blank {
@@ -80,12 +108,10 @@ body {
   font-family: "Roboto Mono", monospace;
 }
 
-#name-div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  -webkit-text-stroke: 0.1px blue;
-  text-shadow: 0px 0px 50px blue;
+#greeting {
+  margin-top: 41px;
+  font-size: 35px;
+  font-weight: 700;
 }
 
 #focus-div {
@@ -94,24 +120,33 @@ body {
   align-items: center;
 }
 
+#focus-div label {
+  font-size: 23px;
+  margin-top: 60px;
+}
+
 #focus {
-  width: 620px;
+  margin-top: 0px;
+  width: 380px;
+  font-size: 23px;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
 }
 
 #footer {
   margin-top: auto;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
   margin-inline: 5px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 #bg {
   align-self: flex-end;
 }
 
-#quote-div {
-  align-self: flex-end;
+#quote-result {
+  text-align: center;
 }
 
 #todo-div {

@@ -1,16 +1,20 @@
 @use 'color'
-// @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap')
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;300;400;500;700&display=swap')
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;300;400;500;700&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@100;200;300;400;500;600;700;800;900&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&display=swap')
 *
   margin: 0
   padding: 0
   box-sizing: border-box
   // transition: 0.3s
 html
-  font-size: 20px
-  // font-family: 'Montserrat', sans-serif
-  font-family: 'Roboto Mono', monospace
+  font-size: 15px
+  font-family: 'Montserrat', sans-serif
+  // font-family: 'Roboto Mono', monospace
 body
   display: flex
   background-image: url(../assets/bg3.jpg)
@@ -19,7 +23,6 @@ body
 // ul
   // margin: 0
   // padding: 0
-
 #page
   display: flex
   flex-direction: column
@@ -27,10 +30,16 @@ body
   width: 100%
   // -webkit-text-stroke: 0.3px blue
   font-weight: 300
-  font-size: 16px
+  // font-size: 16px
   color: white
   // text-shadow: 0px 0px 50px blue
   opacity: 0.85
+.hide
+  display: none
+.invisible
+  visibility: hidden
+li
+  list-style-type: none
 
 #weather
   align-self: flex-end
@@ -49,14 +58,22 @@ body
   // opacity: 0.8
   
 #time-div
-  margin-top: 30vh
+  margin-top: 43vh
+  margin-bottom: 1vh
   font-weight: 700
-  font-size: 100px
-  
+  font-size: 130px
+  font-family: 'Montserrat', sans-serif
+  // font-family: 'Roboto Slab', serif
+  // font-family: 'Share Tech Mono', monospace
+  // font-family: 'Bebas Neue', cursive
+  // font-family: 'Archivo', sans-serif
+  // font-family: 'Gothic A1', sans-serif
 .digit
   // -webkit-text-stroke: 0.1px blue
   // color: #fc821c
   text-shadow: 0px 0px 50px blue
+  font-family: 'Roboto Mono', monospace
+  
   
 #period
   margin-left: 10px
@@ -67,6 +84,13 @@ body
 // end datetime
 
 // name
+#name-div
+  display: flex
+  flex-direction: column
+  align-items: center
+  -webkit-text-stroke: 0.1px blue
+  // color: #fc821c
+  text-shadow: 0px 0px 50px blue
 #name, .blank
   margin-top: 20px
   // border: none
@@ -85,13 +109,10 @@ body
   font-size: 20px
   font-weight: 300
   font-family: 'Roboto Mono', monospace
-#name-div
-  display: flex
-  flex-direction: column
-  align-items: center
-  -webkit-text-stroke: 0.1px blue
-  // color: #fc821c
-  text-shadow: 0px 0px 50px blue
+#greeting
+  margin-top: 41px
+  font-size: 35px
+  font-weight: 700
 // end name
 
 // focus
@@ -99,27 +120,41 @@ body
   display: flex
   flex-direction: column
   align-items: center
+#focus-div label
+  font-size: 23px
+  margin-top: 60px
 #focus
-  width: 620px
+  margin-top: 0px
+  width: 380px
+  font-size: 23px
+  font-weight: 600
+  font-family: 'Montserrat', sans-serif
 // end focus
 
+// footer
 #footer
   // align-self: flex-end
   // margin-top: 100px
   // position: absolute
   // bottom: 0
   margin-top: auto
-  margin-bottom: 5px
+  margin-bottom: 15px
   margin-inline: 5px
   display: flex
-  justify-content: space-between
-
+  // justify-content: space-between
+  justify-content: center
 #bg
   align-self: flex-end
-
 #quote-div
-  align-self: flex-end
-
+  // align-self: flex-end
+  // justify-self: center
+  // text-align: center
+  // margin-left: 50vw
+#quote-result
+  text-align: center
+  // align-self: flex-end
+  // justify-self: center
+  // text-align: center
 #todo-div
   align-self: flex-end
-  
+// end footer  

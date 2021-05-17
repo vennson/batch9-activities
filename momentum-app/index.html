@@ -12,17 +12,17 @@
   <div id="page">
 
     <!-- weather -->
-    <div id="weather">
-      <!-- Weather -->
+    <div id="weather" class="hide">
+      Weather
     </div>
     <!-- end weather -->
 
     <!-- time -->
     <div id='datetime'>
       <div id="time-div">
-        <span id="hour" class='digit'>00</span>:<span id="minute" class='digit'>00</span>:<span id="second" class='digit'>00</span><span id="period">AM</span>
+        <span id="hour" class='digit'>00</span>:<span id="minute" class='digit'>00</span><span class="colon hide">:</span><span id="second" class='digit hide'>00</span><span id="period" class="hide">AM</span>
       </div>
-      <div id="date-div">
+      <div id="date-div" class="hide">
         <span id="day">Day</span>,
         <span id="month">Month</span>
         <span id="date">00</span>,
@@ -34,17 +34,17 @@
     <!-- name -->
     <div id="name-div">
       <!-- <label for="name">Name:</label> -->
-      <input type="text" id="name" placeholder="What's your name?" class="blank">
-      <input type="button" id='name-btn' value="submit" onclick="submitName()">
-      <h1>Good afternoon, <span id="name-result"></span>.</h1>
+      <input type="text" id="name" placeholder="What's your name?" class="blank hide">
+      <input type="button" id='name-btn' value="submit" onclick="submitName()" class="hide">
+      <h1 id="greeting">Good evening, <span id="name-result">Benson</span>.</h1>
     </div>
     <!-- end name -->
 
     <!-- main focus -->
     <div id="focus-div">
-      <label for="focus">Today</label>
-      <input type="text" id="focus" class="blank" placeholder="What is your main focus for today?">
-      <input type="button" id='focus-btn' value="submit" onclick="submitFocus()">
+      <label for="focus">What is your main focus for today?</label>
+      <input type="text" id="focus" class="blank">
+      <input type="button" id='focus-btn' value="submit" onclick="submitFocus()" class="hide">
       <h2><span id="focus-result"></span></h2>
     </div>
     <!-- end main focus -->
@@ -53,23 +53,23 @@
     <div id="footer">
       <!-- bg -->
       <div id="bg">
-        <p>Change wallpaper</p>
+        <p class="hide">Change wallpaper</p>
       </div>
       <!-- end bg -->
 
       <!-- quote -->
       <div id="quote-div">
         <ul id="quotes">
-          <li><p>"<span id="quote-result">life is life</span>"</p></li>
+          <li><p><span id="quote-result">life is life</span></p></li>
         </ul>
-        <label for="quote">Add quote:</label>
-        <input id="quote" type="text" class="blank">
-        <input type="button" id='focus-btn' value="add" onclick="addQuote()">
+        <label for="quote" class="hide">Add quote:</label>
+        <input id="quote" type="text" class="blank hide">
+        <input type="button" id='focus-btn' value="add" onclick="addQuote()" class="hide">
       </div>
       <!-- end quote -->
       
       <!-- todo -->
-      <div id="todo-div">
+      <div id="todo-div" class="hide">
         <label for="todo">Todos:</label>
         <ul id="todo-list">
           <li class="todo"><p>do momentum app</p></li>
