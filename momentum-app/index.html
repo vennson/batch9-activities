@@ -15,6 +15,7 @@
     <div id="weather" class="hide">
       Weather
     </div>
+    
     <!-- end weather -->
 
     <!-- time -->
@@ -51,32 +52,39 @@
 
     
     <div id="footer">
-      <!-- bg -->
-      <div id="bg">
-        <p class="hide">Change wallpaper</p>
+      <!-- change-bg -->
+      <div id="change-bg">
+        <p>Change wallpaper</p>
       </div>
-      <!-- end bg -->
+      <!-- end change-bg -->
 
       <!-- quote -->
       <div id="quote-div">
         <ul id="quotes">
-          <li><p><span id="quote-result">life is life</span></p></li>
+          <li><p>"<span id="quote-result">life is life</span>"</p></li>
         </ul>
         <label for="quote" class="hide">Add quote:</label>
-        <input id="quote" type="text" class="blank hide">
+        <input id="quote" type="text" class="blank">
         <input type="button" id='focus-btn' value="add" onclick="addQuote()" class="hide">
       </div>
       <!-- end quote -->
       
       <!-- todo -->
-      <div id="todo-div" class="hide">
-        <label for="todo">Todos:</label>
-        <ul id="todo-list">
-          <li class="todo"><p>do momentum app</p></li>
-        </ul>
-        <label for="todo">Add todo:</label>
-        <input id="todo" type="text" class="blank">
-        <input type="button" id='todo-btn' value="add" onclick="addTodo()">
+      <div id="todo-div">
+        <div class="hide">
+          <label id="things-todo" for="todo"><span id="todo-num">1 </span>THING TO DO</label>
+          <ul id="todo-list">
+            <input type="checkbox" id="checkbox1">
+            <label class="todo" for="checkbox1">do momentum app</label>
+            <!-- <li class="todo"><p>do momentum app</p></li> -->
+          </ul>
+          
+          <input id="todo" type="text" class="blank">
+          <input type="button" id='todo-btn' value="add" onclick="addTodo()"><br>
+        </div>
+        <div id="todo-init-box">
+          <label id='todo-init' for="todo">Todo</label>
+        </div>
       </div>
       <!-- end todo -->
     </div>

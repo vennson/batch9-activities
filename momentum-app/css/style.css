@@ -136,21 +136,66 @@ li {
 #footer {
   margin-top: auto;
   margin-bottom: 15px;
-  margin-inline: 5px;
-  display: flex;
-  justify-content: center;
+  margin-inline: 10px;
+  display: grid;
+  grid-template-columns: 30vw auto 30vw;
 }
 
-#bg {
-  align-self: flex-end;
+#change-bg {
+  align-self: end;
+}
+
+#quote-div {
+  justify-self: center;
+  align-self: end;
 }
 
 #quote-result {
+  justify-self: center;
   text-align: center;
 }
 
+#quotes {
+  text-align: center;
+}
+
+#quote {
+  display: none;
+  margin-top: 1px;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
 #todo-div {
-  align-self: flex-end;
+  right: 10px;
+  bottom: 10px;
+  position: absolute;
+  justify-self: end;
+}
+
+#things-todo {
+  font-size: 11px;
+}
+
+#todo {
+  width: 20vw;
+  text-align: left;
+  font-weight: 500;
+  font-size: 15px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.todo {
+  font-weight: 500;
+}
+
+#todo-init-box {
+  display: grid;
+}
+
+#todo-init {
+  text-align: right;
+  padding-top: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */

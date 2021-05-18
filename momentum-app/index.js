@@ -57,7 +57,7 @@ function submitFocus() {
 // end focus
 
 // quotes
-const quotes = ['Life is life.', 'Time is gold.', 'Not all heroes wear capes.', 'Ask the right questions.']
+const quotes = ['Life is life.', 'Time is gold.', 'Not all heroes wear capes.', 'Work smart & work hard.']
 const random = Math.floor(Math.random() * quotes.length)
 document.querySelector('#quote-result').innerHTML = quotes[random]
 

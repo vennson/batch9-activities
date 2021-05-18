@@ -139,22 +139,77 @@ li
   // bottom: 0
   margin-top: auto
   margin-bottom: 15px
-  margin-inline: 5px
-  display: flex
+  margin-inline: 10px
+  display: grid
+  grid-template-columns: 30vw auto 30vw
+  // grid-template-rows: 5vw
   // justify-content: space-between
-  justify-content: center
-#bg
-  align-self: flex-end
+  // justify-content: center
+
+// change-bg
+#change-bg
+  // align-self: flex-end
+  align-self: end
+// end change-bg
+
 #quote-div
   // align-self: flex-end
   // justify-self: center
   // text-align: center
   // margin-left: 50vw
+  justify-self: center
+  align-self: end
 #quote-result
+  justify-self: center
   text-align: center
+// #quote-div:hover #quote
+//   // display: grid
+//   visibility: visible
+//   opacity: 1
+  // transition: visibility .3s ease
+  // transition: opacity 1s ease
+// #quote-div:active #quote
+//   visibility: visible
+//   opacity: 1
+#quotes
+  // left: 50
+  // position: absolute
+  text-align: center
+  // padding-bottom: -10px
+  // text-align: center
   // align-self: flex-end
   // justify-self: center
   // text-align: center
+#quote
+  display: none
+  // visibility: hidden
+  margin-top: 1px
+  opacity: 0
+  transition: opacity 1s ease
+  
+// todo
 #todo-div
-  align-self: flex-end
+  right: 10px
+  bottom: 10px
+  position: absolute
+  // align-self: flex-end
+  justify-self: end
+#things-todo
+  font-size: 11px
+#todo
+  width: 20vw
+  text-align: left
+  font-weight: 500
+  font-size: 15px
+  font-family: 'Montserrat', sans-serif
+.todo
+  font-weight: 500
+#todo-init-box
+  display: grid
+#todo-init
+  // justify-self: end
+  text-align: right
+  padding-top: 10px
+  // justify-self: end
+// end todo
 // end footer  
