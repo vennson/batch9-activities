@@ -20,7 +20,9 @@ body
   display: flex
   background-image: url(../assets/bg3.jpg)
   background-size: cover
+  background-position: center
   height: 100vh
+  width: 100vw
   transition: background-image 1s ease
 // ul
   // margin: 0
@@ -29,7 +31,7 @@ body
   display: flex
   flex-direction: column
   height: 100vh
-  width: 100%
+  width: 100vw
   // -webkit-text-stroke: 0.3px blue
   font-weight: 300
   // font-size: 16px
@@ -161,15 +163,19 @@ li
   margin-bottom: 15px
   margin-inline: 15px
   display: grid
-  grid-template-columns: 17vw auto 17vw
+  // grid-template-columns: 17vw auto 17vw
   // grid-template-rows: 5vw
   // justify-content: space-between
   // justify-content: center
 
 // change-bg
 #change-bg
+  position: absolute
+  top: 15px
+  bottom: auto
+
   // align-self: flex-end
-  align-self: end
+  // align-self: end
   cursor: pointer
   display: flex
 #change-bg:hover
@@ -182,11 +188,12 @@ li
   // justify-self: center
   // text-align: center
   // margin-left: 50vw
-  justify-self: center
-  align-self: end
+  // justify-self: center
+  // align-self: end
 #quote-result
-  justify-self: center
-  text-align: center
+  // padding-inline: 100px
+  // justify-self: center
+  // text-align: center
 // #quote-div:hover #quote
 //   // display: grid
 //   visibility: visible
@@ -200,8 +207,13 @@ li
   // left: 50
   // position: absolute
   text-align: center
-  width: 30vw
+  // width: 300px
   font-style: italic
+  position: absolute
+  left: 0
+  right: 0
+  bottom: 10px
+  // margin-inline: auto
   // padding-bottom: -10px
   // text-align: center
   // align-self: flex-end
@@ -232,10 +244,11 @@ li
   flex-direction: column
   height: 95vh
   right: 15px
-  bottom: 15px
+  bottom: auto
+  top: 15px
   position: absolute
   // align-self: flex-end
-  justify-content: flex-end
+  // justify-content: flex-end
   // justify-self: end
 #todo-upper
   min-height: 78px
@@ -252,6 +265,8 @@ li
   margin-block-end: 0
   padding-inline-start: 0
   margin-inline: 5px
+  display: flex
+  flex-direction: column
   // height: 10px
 .checkbox:checked + .todo
   text-decoration: line-through
@@ -267,12 +282,13 @@ li
   margin-bottom: 20px
 .todo
   font-weight: 500
+  // display: inline-flex
 #todo-init-box
   display: grid
 #todo-init
   // justify-self: end
   text-align: right
-  padding-top: 10px
+  padding-bottom: 10px
   cursor: pointer
 #todo-init:hover
   font-weight: 500
@@ -297,7 +313,38 @@ li
 // end footer  
 
 // media query
-@media only screen and (max-width: 425px)
+@media only screen and (max-width: 319px)
+  body
+    margin-inline: 0
+  #time-div
+    margin-top: 20vh
+    font-size: 28vw
+  #time-div:hover
+    font-size: 15vw
+  #time-div:hover + #date-div
+    font-size: 10vw
+  #name-div
+    margin-top: 34vh
+  #date-div
+    margin-top: -8px
+  #greeting, #entered-name, #name-div h1, #name
+    font-size: 4.5vw
+  #name
+    width: 30vw
+  #focus-div
+    margin-top: 38vh
+  #focus-div-label, #focus
+    font-size: 4vw
+  #focus
+    width: 65vw
+    // border-color: white
+  #footer, #todo
+    font-size: 4vw
+  #change-bg
+    // display: flex
+    flex-direction: column
+
+@media only screen and (min-width: 320px) and (max-width: 425px)
   body
     margin-inline: 0
   #time-div

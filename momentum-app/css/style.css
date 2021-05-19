@@ -20,7 +20,9 @@ body {
   display: flex;
   background-image: url(../assets/bg3.jpg);
   background-size: cover;
+  background-position: center;
   height: 100vh;
+  width: 100vw;
   transition: background-image 1s ease;
 }
 
@@ -28,7 +30,7 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   font-weight: 300;
   color: white;
   text-shadow: 0px 0px 50px black;
@@ -155,11 +157,12 @@ li {
   margin-bottom: 15px;
   margin-inline: 15px;
   display: grid;
-  grid-template-columns: 17vw auto 17vw;
 }
 
 #change-bg {
-  align-self: end;
+  position: absolute;
+  top: 15px;
+  bottom: auto;
   cursor: pointer;
   display: flex;
 }
@@ -168,20 +171,13 @@ li {
   font-weight: 500;
 }
 
-#quote-div {
-  justify-self: center;
-  align-self: end;
-}
-
-#quote-result {
-  justify-self: center;
-  text-align: center;
-}
-
 #quotes {
   text-align: center;
-  width: 30vw;
   font-style: italic;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 10px;
 }
 
 #quote-div:hover {
@@ -213,9 +209,9 @@ li {
   flex-direction: column;
   height: 95vh;
   right: 15px;
-  bottom: 15px;
+  bottom: auto;
+  top: 15px;
   position: absolute;
-  justify-content: flex-end;
 }
 
 #todo-upper {
@@ -236,6 +232,8 @@ li {
   margin-block-end: 0;
   padding-inline-start: 0;
   margin-inline: 5px;
+  display: flex;
+  flex-direction: column;
 }
 
 .checkbox:checked + .todo {
@@ -264,7 +262,7 @@ li {
 
 #todo-init {
   text-align: right;
-  padding-top: 10px;
+  padding-bottom: 10px;
   cursor: pointer;
 }
 
@@ -294,7 +292,61 @@ li {
   cursor: pointer;
 }
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 319px) {
+  body {
+    margin-inline: 0;
+  }
+
+  #time-div {
+    margin-top: 20vh;
+    font-size: 28vw;
+  }
+
+  #time-div:hover {
+    font-size: 15vw;
+  }
+
+  #time-div:hover + #date-div {
+    font-size: 10vw;
+  }
+
+  #name-div {
+    margin-top: 34vh;
+  }
+
+  #date-div {
+    margin-top: -8px;
+  }
+
+  #greeting, #entered-name, #name-div h1, #name {
+    font-size: 4.5vw;
+  }
+
+  #name {
+    width: 30vw;
+  }
+
+  #focus-div {
+    margin-top: 38vh;
+  }
+
+  #focus-div-label, #focus {
+    font-size: 4vw;
+  }
+
+  #focus {
+    width: 65vw;
+  }
+
+  #footer, #todo {
+    font-size: 4vw;
+  }
+
+  #change-bg {
+    flex-direction: column;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 425px) {
   body {
     margin-inline: 0;
   }

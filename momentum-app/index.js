@@ -196,22 +196,40 @@ var counter = 0
 var count_string = ''
 const things_todo = document.querySelector('#things-todo')
 const todo_num = document.querySelector('#todo-num')
+const todo_elements = []
+var counter_id = 0
 
 function addTodo(event) {
   if (event.key === 'Enter') {
     counter++
+    counter_id++
     const todo_value = document.querySelector('#todo').value
     todos.push(todo_value)
 
     displayCounter()
 
     document.querySelector('#todo-list').innerHTML += (
-      // '<li class="todo"><p>' + todo + '</p></li>'
-      '<input type="checkbox" class="checkbox">'
-      + '<label class="todo">' + ' ' + todo_value + '</label><br>'
+      '<div id="'+('d'+ counter_id) +'"><input id="'+ ('b' + counter_id) +'" type="checkbox" class="checkbox">'
+      + '<label id="'+ (counter_id) +'" class="todo">' + ' ' + todo_value + '</label><br></div>'
     )
+
+    // new_todo_element = (
+    //   '<input type="checkbox" class="checkbox">'
+    //   + '<label class="todo">' + ' ' + todo_value + '</label><br>'
+    // ) 
+
+    // todo_elements.push(new_todo_element)
+    // displayAllTodos(todo_elements)
+
     todo.value = ''
     // todo.blur()
+
+    let todos_dbclick = document.querySelectorAll('.todo')
+    // todos.push(todo)
+    todos_dbclick = Array.from(todos_dbclick)
+    todos_dbclick.map(todo => {
+      return todo.addEventListener('dblclick', deleteSelf)
+    })
 
     let checkboxes = document.querySelectorAll('.checkbox')
     checkboxes = Array.from(checkboxes)
@@ -222,12 +240,14 @@ function addTodo(event) {
   }
 }
 
+
+
 const delete_btn = document.querySelector('#delete') 
 delete_btn.addEventListener('click', deleteAll)
 
 function deleteAll() {
   document.querySelector('#todo-list').innerHTML = ''
-  count_string = 'NOTHING TO DO'
+  count_string = 'ADD TO DO'
   things_todo.innerHTML = '<span id="todo-num"></span>'+ count_string
 }
 
@@ -246,7 +266,7 @@ function toggleCount() {
   if (this.checked) {
     counter--
     if (counter === 0) {
-      count_string = 'NOTHING TO DO'
+      count_string = 'ADD TO DO'
       things_todo.innerHTML = '<span id="todo-num"></span>'+ count_string
     } else {
       displayCounter()
@@ -257,13 +277,30 @@ function toggleCount() {
 }
 
 function displayCounter() {
-  if (counter === 1) {
+  if (counter === 0) {
+    count_string = 'ADD TO DO'
+    things_todo.innerHTML = '<span id="todo-num"></span>'+ count_string
+    return
+  }
+  else if (counter === 1) {
     count_string = 'THING TO DO'
   } else {
     count_string = 'THINGS TO DO'
   }
   things_todo.innerHTML = '<span id="todo-num">'+ counter +' </span>'+ count_string
   // todo_num.innerHTML = counter + ' '
+}
+
+function deleteSelf(event) {
+  // console.log(this)
+  // this.style.display = 'none'
+  // this.parentNode.removeChild(this)
+  // var theID = '#'+ event.target.id
+  var theCheckBox = document.querySelector('#d' + event.target.id)
+  theCheckBox.parentNode.removeChild(theCheckBox)
+  console.log(event.target.id)
+  counter--
+  displayCounter()
 }
 // end todo
 
