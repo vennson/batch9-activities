@@ -171,13 +171,15 @@ li {
   font-weight: 500;
 }
 
+#quote-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 #quotes {
   text-align: center;
   font-style: italic;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 10px;
 }
 
 #quote-div:hover {
@@ -199,7 +201,8 @@ li {
 
 #quote-add {
   display: none;
-  margin-bottom: -7px;
+  margin-bottom: 0px;
+  margin-left: 5px;
   height: 25px;
   cursor: pointer;
 }
