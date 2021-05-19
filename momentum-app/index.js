@@ -265,7 +265,7 @@ function toggleCount() {
   // console.log('clicked')
   if (this.checked) {
     counter--
-    if (counter === 0) {
+    if (counter <= 0) {
       count_string = 'ADD TO DO'
       things_todo.innerHTML = '<span id="todo-num"></span>'+ count_string
     } else {
@@ -277,7 +277,7 @@ function toggleCount() {
 }
 
 function displayCounter() {
-  if (counter === 0) {
+  if (counter <= 0) {
     count_string = 'ADD TO DO'
     things_todo.innerHTML = '<span id="todo-num"></span>'+ count_string
     return
