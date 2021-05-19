@@ -21,7 +21,7 @@
     <!-- time -->
     <div id='datetime'>
       <div id="time-div">
-        <span id="hour" class='digit'>00</span>:<span id="minute" class='digit'>00</span><span class="colon hide">:</span><span id="second" class='digit hide'>00</span><span id="period" class="hide">AM</span>
+        <span id="hour" class='digit'>00</span>:<span id="minute" class='digit'>00</span><span id="extra-time" class="hide"><span class="colon">:</span><span id="second" class='digit'>00</span><span id="period">AM</span></span>
       </div>
       <div id="date-div" class="hide">
         <span id="day">Day</span>,
@@ -35,15 +35,15 @@
     <!-- name -->
     <div id="name-div">
       <!-- <label for="name">Name:</label> -->
-      <input type="text" id="name" placeholder="What's your name?" class="blank hide">
-      <input type="button" id='name-btn' value="submit" onclick="submitName()" class="hide">
-      <h1 id="greeting">Good evening, <span id="name-result">Benson</span>.</h1>
+      <!-- <input type="text" id="name" placeholder="What's your name?" class="blank"> -->
+      <!-- <input type="button" id='name-btn' value="submit" onclick="submitName()" class="hide"> -->
+      <h1><span id="greeting">Good evening, </span><span id='entered-name'></span><input type="text" id="name" class="blank"></input">.</h1>
     </div>
     <!-- end name -->
 
     <!-- main focus -->
     <div id="focus-div">
-      <label for="focus">What is your main focus for today?</label>
+      <label id="focus-div-label" for="focus">What is your main focus for today?</label>
       <input type="text" id="focus" class="blank">
       <input type="button" id='focus-btn' value="submit" onclick="submitFocus()" class="hide">
       <h2><span id="focus-result"></span></h2>
@@ -54,33 +54,36 @@
     <div id="footer">
       <!-- change-bg -->
       <div id="change-bg">
-        <p>Change wallpaper</p>
+        <p><p>Change&nbsp</p><p>wallpaper</p></p>
       </div>
       <!-- end change-bg -->
 
       <!-- quote -->
       <div id="quote-div">
-        <ul id="quotes">
-          <li><p>"<span id="quote-result">life is life</span>"</p></li>
-        </ul>
-        <label for="quote" class="hide">Add quote:</label>
+        <span id="quotes">"<span id="quote-result">life is life</span>"</span>
         <input id="quote" type="text" class="blank">
-        <input type="button" id='focus-btn' value="add" onclick="addQuote()" class="hide">
+        <img id="quote-add" class="" src="https://img.icons8.com/metro/52/ffffff/plus-2-math.png"/>
+        <label for="quote" class="hide">Add quote:</label>
+        
+        <!-- <input type="button" id='focus-btn' value="add" onclick="addQuote()" class="hide"> -->
+        
       </div>
       <!-- end quote -->
       
       <!-- todo -->
       <div id="todo-div">
-        <div class="hide">
-          <label id="things-todo" for="todo"><span id="todo-num">1 </span>THING TO DO</label>
+        <div id="todo-upper" class="invisible">
+          <label id="things-todo"><span id="todo-num"></span>NOTHING TO DO</label><img id="delete" src="https://img.icons8.com/material/96/ffffff/delete-forever--v2.png"/>
           <ul id="todo-list">
-            <input type="checkbox" id="checkbox1">
-            <label class="todo" for="checkbox1">do momentum app</label>
+            <!-- <input type="checkbox" id="checkbox1" class="checkbox">
+            <label class="todo" for="checkbox1">do momentum app</label><br>
+            <input type="checkbox" id="checkbox2" class="checkbox">
+            <label class="todo" for="checkbox2">do momentum app</label> -->
             <!-- <li class="todo"><p>do momentum app</p></li> -->
           </ul>
           
           <input id="todo" type="text" class="blank">
-          <input type="button" id='todo-btn' value="add" onclick="addTodo()"><br>
+          <!-- <input type="button" id='todo-btn' value="add" onclick="addTodo()"><br> -->
         </div>
         <div id="todo-init-box">
           <label id='todo-init' for="todo">Todo</label>

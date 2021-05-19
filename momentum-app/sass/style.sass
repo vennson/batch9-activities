@@ -10,6 +10,7 @@
   margin: 0
   padding: 0
   box-sizing: border-box
+  // flex-grow: 1
   // transition: 0.3s
 html
   font-size: 15px
@@ -20,6 +21,7 @@ body
   background-image: url(../assets/bg3.jpg)
   background-size: cover
   height: 100vh
+  transition: background-image 1s ease
 // ul
   // margin: 0
   // padding: 0
@@ -32,7 +34,7 @@ body
   font-weight: 300
   // font-size: 16px
   color: white
-  // text-shadow: 0px 0px 50px blue
+  text-shadow: 0px 0px 50px black
   opacity: 0.85
 .hide
   display: none
@@ -54,45 +56,53 @@ li
   color: white
   // -webkit-text-stroke: 0.2px blue
   // color: #fc821c
-  text-shadow: 0px 0px 50px blue
+  // text-shadow: 0px 0px 50px blue
   // opacity: 0.8
-  
 #time-div
+  cursor: pointer
   margin-top: 43vh
   margin-bottom: 1vh
   font-weight: 700
   font-size: 130px
   font-family: 'Montserrat', sans-serif
+  transition: margin-top .5s ease
   // font-family: 'Roboto Slab', serif
   // font-family: 'Share Tech Mono', monospace
   // font-family: 'Bebas Neue', cursive
   // font-family: 'Archivo', sans-serif
   // font-family: 'Gothic A1', sans-serif
+// #time-div:hover
+//   margin-top: 31.7vh
 .digit
   // -webkit-text-stroke: 0.1px blue
   // color: #fc821c
-  text-shadow: 0px 0px 50px blue
+  // text-shadow: 0px 0px 50px blue
   font-family: 'Roboto Mono', monospace
-  
-  
 #period
   margin-left: 10px
   font-size: 25px
 #date-div
+  margin-top: 10px 
   font-size: 30px
   font-weight: 700
 // end datetime
 
 // name
 #name-div
+  position: absolute
+  margin-top: 49vh
+  left: 0
+  right: 0
+  margin-inline: auto
   display: flex
   flex-direction: column
   align-items: center
-  -webkit-text-stroke: 0.1px blue
+  opacity: .9
+  // -webkit-text-stroke: 0.1px blue
   // color: #fc821c
-  text-shadow: 0px 0px 50px blue
+  // text-shadow: 0px 0px 50px blue
 #name, .blank
-  margin-top: 20px
+  // margin-top: 20px
   // border: none
   border-inline: none
   border-top: none
@@ -100,35 +110,45 @@ li
   border-bottom-width: 1px
   border-radius: 0
   border-color: #ffffffc4
-  width: 310px
+  width: 200px
   // margin-bottom: 10px
   outline: none
   background-color: transparent
   color: white
   text-align: center
-  font-size: 20px
-  font-weight: 300
-  font-family: 'Roboto Mono', monospace
-#greeting
-  margin-top: 41px
   font-size: 35px
   font-weight: 700
+  font-family: 'Montserrat', sans-serif
+#name-div h1
+  margin-top: 45px
+  font-size: 35px
+  font-weight: 700
+  // transition: .5s ease
 // end name
 
 // focus
 #focus-div
+  position: absolute
+  margin-top: 65vh
+  left: 0
+  right: 0
+  margin-inline: auto
   display: flex
   flex-direction: column
   align-items: center
-#focus-div label
+#focus-div-label
   font-size: 23px
   margin-top: 60px
+  transition: opacity .5s ease
 #focus
   margin-top: 0px
   width: 380px
   font-size: 23px
   font-weight: 600
   font-family: 'Montserrat', sans-serif
+.focus-enter
+  border-color: transparent
+  transition: border-color .5s ease
 // end focus
 
 // footer
@@ -139,9 +159,9 @@ li
   // bottom: 0
   margin-top: auto
   margin-bottom: 15px
-  margin-inline: 10px
+  margin-inline: 15px
   display: grid
-  grid-template-columns: 30vw auto 30vw
+  grid-template-columns: 17vw auto 17vw
   // grid-template-rows: 5vw
   // justify-content: space-between
   // justify-content: center
@@ -150,6 +170,11 @@ li
 #change-bg
   // align-self: flex-end
   align-self: end
+  cursor: pointer
+  display: flex
+#change-bg:hover
+  font-weight: 500
+  
 // end change-bg
 
 #quote-div
@@ -175,33 +200,71 @@ li
   // left: 50
   // position: absolute
   text-align: center
+  width: 30vw
+  font-style: italic
   // padding-bottom: -10px
   // text-align: center
   // align-self: flex-end
   // justify-self: center
   // text-align: center
+#quote-div:hover
+  font-weight: 500
+#quote-div:hover #quote-add
+  display: inline
 #quote
   display: none
   // visibility: hidden
   margin-top: 1px
-  opacity: 0
+  font-size: 15px
+  font-weight: 300
+  width: 300px
+  // opacity: 0
   transition: opacity 1s ease
+#quote-add
+  display: none
+  margin-bottom: -7px 
+  height: 25px
+  cursor: pointer
   
 // todo
 #todo-div
-  right: 10px
-  bottom: 10px
+  display: flex
+  flex-direction: column
+  height: 95vh
+  right: 15px
+  bottom: 15px
   position: absolute
   // align-self: flex-end
-  justify-self: end
+  justify-content: flex-end
+  // justify-self: end
+#todo-upper
+  min-height: 78px
+  max-height: 90vh
+  box-shadow: 3px 3px 5px 1px #ffffff
+  border-radius: 5px
+  transition: opacity .5s ease
 #things-todo
   font-size: 11px
+  margin-inline: 5px
+  // margin-bottom: 10px
+#todo-list
+  margin-block-start: 0
+  margin-block-end: 0
+  padding-inline-start: 0
+  margin-inline: 5px
+  // height: 10px
+.checkbox:checked + .todo
+  text-decoration: line-through
+  color: gray
 #todo
+  margin-top: 20px
   width: 20vw
   text-align: left
   font-weight: 500
   font-size: 15px
   font-family: 'Montserrat', sans-serif
+  margin-inline: 5px
+  margin-bottom: 20px
 .todo
   font-weight: 500
 #todo-init-box
@@ -210,6 +273,146 @@ li
   // justify-self: end
   text-align: right
   padding-top: 10px
+  cursor: pointer
+#todo-init:hover
+  font-weight: 500
   // justify-self: end
+.clicked
+  font-weight: 500
+.visible
+  opacity: 1
+.invisible
+  opacity: 0
+#delete
+  position: absolute
+  height: 23px
+  margin-top: 2px
+  right: 0
+  left: 100
+  margin-inline: auto
+  cursor: pointer
+  // justify-self: end
+  // align-self: end
 // end todo
 // end footer  
+
+// media query
+@media only screen and (max-width: 425px)
+  body
+    margin-inline: 0
+  #time-div
+    margin-top: 20vh
+    font-size: 90px
+  #time-div:hover
+    font-size: 60px
+  #time-div:hover + #date-div
+    font-size: 20px
+  #name-div
+    margin-top: 34vh
+  #date-div
+    margin-top: -8px
+  #greeting, #entered-name, #name-div h1, #name
+    font-size: 15px
+  #name
+    width: 100px
+  #focus-div
+    margin-top: 38vh
+  #focus-div-label, #focus
+    font-size: 13px
+  #focus
+    width: 220px
+    // border-color: white
+  #footer, #todo
+    font-size: 10px
+  #change-bg
+    // display: flex
+    flex-direction: column
+
+@media only screen and (max-width: 600px) and (min-width: 426px)
+  body
+    margin-inline: 0
+  #time-div
+    font-size: 90px * 1.2
+    margin-top: 20vh * 1.2
+  #time-div:hover
+    font-size: 60px * 1.2
+  #time-div:hover + #date-div
+    font-size: 20px * 1.2
+  #greeting, #entered-name, #name-div h1, #name
+    font-size: 15px * 1.6
+  #name-div
+    margin-top: 34vh * 1.3
+  #name
+    width: 100px * 1.4
+  #focus-div-label, #focus
+    font-size: 15px * 1.3
+  #focus-div
+    margin-top: 38vh * 1.35
+  #focus
+    width: 250px * 1.3
+    // border-color: white
+  #footer, #todo
+    font-size: 10px * 1.3
+  #change-bg
+    // display: flex
+    flex-direction: column
+
+@media only screen and (max-width: 768px) and (min-width: 601px)
+  body
+    margin-inline: 0
+  #time-div
+    font-size: 90px * 1.3
+    margin-top: 20vh * 1.5
+  #time-div:hover
+    font-size: 60px * 1.5
+  #time-div:hover + #date-div
+    font-size: 20px * 1.5
+  #greeting, #entered-name, #name-div h1, #name
+    font-size: 15px * 1.8
+  #name-div
+    margin-top: 34vh * 1.4
+  #name
+    width: 100px * 1.6
+  #focus-div-label, #focus
+    font-size: 15px * 1.4
+  #focus-div
+    margin-top: 38vh * 1.55
+  #focus
+    width: 250px * 1.4  
+    // border-color: white
+  #footer, #todo
+    font-size: 10px * 1.5
+  #change-bg
+    // display: flex
+    flex-direction: column
+
+// @media only screen and (min-width: 769px)
+//   body
+//     margin-inline: 0
+//   #time-div
+//     font-size: 90px * 1.8
+//   #time-div:hover
+//     font-size: 60px * 2
+//   #time-div:hover + #date-div
+//     font-size: 20px * 1.7
+//   // #datetime #time-div:hover ~ #name-div
+//   //   margin-top: -10px
+//   #name-div
+//     margin-top: -10px
+//   #greeting, #entered-name, #name-div h1, #name
+//     font-size: 15px * 2.3
+//   #name
+//     width: 100px * 2.5
+//   #focus-div-label, #focus
+//     font-size: 15px * 2
+//   #focus
+//     width: 250px * 2
+//     // border-color: white
+//   #footer, #todo
+//     font-size: 10px * 2
+//   #change-bg
+//     // display: flex
+//     // flex-direction: column
+// end media query
+  
+// end media query
