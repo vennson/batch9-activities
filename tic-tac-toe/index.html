@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <script type="module" src="./index.js" defer></script>
+  <link rel="icon" href="assets/icon.png">
+  <title>Tic Tac Toe</title>
+</head>
+<body>
+  <div class="choose-player show" id="choosePlayer">
+    <button id="playerChooseButton">Play as O</button>
+  </div>
+  <div class="board" id="board">
+    <div class="cell" data-cell></div>
+    <div class="cell" data-cell></div>
+    <div class="cell" data-cell></div>
+    <div class="cell" data-cell></div>
+    <div class="cell" data-cell></div>
+    <div class="cell" data-cell></div>
+    <div class="cell" data-cell></div>
+    <div class="cell" data-cell></div>
+    <div class="cell" data-cell></div>
+  </div>
+  <div class="history-message" id='historyMessage'>
+    <div data-history-message-text class='history-text'></div>
+    <div class='history-buttons' id='historyButtons'>
+      <button id='prevButton'>Previous</button>
+      <button id='nextButton'>Next</button>
+    </div>
+  </div>
+  <div class="winning-message" id="winningMessage">
+    <div data-winning-message-text></div>
+    <button id="restartButton">Restart</button>
+    <button id="historyButton">History</button>
+  </div>
+</body>
+</html>
