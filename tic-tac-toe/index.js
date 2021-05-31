@@ -24,12 +24,12 @@ const historyMessage = document.getElementById('historyMessage')
 const prevButton = document.getElementById('prevButton')
 const nextButton = document.getElementById('nextButton')
 const historyMessageTextElement = document.querySelector('[data-history-message-text]')
+const restartButton2 = document.getElementById('restartButton2')
 let historyCounter = 0
 
 const choosePlayer = document.getElementById('choosePlayer')
 const playerChooseButton = document.getElementById('playerChooseButton')
 playerChooseButton.addEventListener('click', changePlayer)
-
 
 historyButton.addEventListener('click', showHistory)
 prevButton.addEventListener('click', prevHistory)
@@ -38,6 +38,7 @@ nextButton.addEventListener('click', nextHistory)
 startGame()
 
 restartButton.addEventListener('click', startGame)
+restartButton2.addEventListener('click', startGame)
 
 function startGame() {
   // circleTurn = false
@@ -113,7 +114,6 @@ function checkWin(currentClass) {
   })
 }
 
-
 function saveState() {
   history.push(board.innerHTML)
 }
@@ -155,7 +155,6 @@ function nextHistory() {
     nextButton.disabled = true
   }
 }
-
 
 function changePlayer() {
   circleTurn = circleTurn ? false : true
