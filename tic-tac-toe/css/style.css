@@ -67,6 +67,12 @@ body {
   cursor: not-allowed;
 }
 
+.cell.x.match::before,
+.cell.x.match::after,
+.cell.circle.match::before {
+  background-color: #4eff3d;
+}
+
 .cell.x::before,
 .cell.x::after,
 .cell.circle::before {
