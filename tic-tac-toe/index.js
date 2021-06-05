@@ -42,15 +42,12 @@ restartButton.addEventListener('click', startGame)
 restartButton2.addEventListener('click', () => location.reload())
 
 function startGame() {
-  // const cellElements = document.querySelectorAll('[data-cell]')
-  // const board = document.getElementById('board')
+  
   historyCounter = 0
   console.log('startgame')
   console.log(historyCounter)
   console.log(board.innerHTML)
 
-  // board.innerHTML = board_fresh_html
-  // circleTurn = false
   choosePlayer.classList.add('show')
   cellElements.forEach(cell => {
     cell.classList.remove(X_CLASS)
@@ -65,11 +62,6 @@ function startGame() {
   winningMessageElement.classList.remove('show')
   historyMessage.classList.remove('show')
   history.length = 0
-
-  // for (let i = 0; i < cellElements.length; i++) {
-  //   cellElements[i].classList.remove('match')
-    
-  // }
 }
 
 function handleClick(e) {
@@ -80,7 +72,6 @@ function handleClick(e) {
   saveState()
   if (checkWin(currentClass)) {
     draw = false
-    // endGame(false)
     endGame()
     
   } else if (isDraw()) {
@@ -136,7 +127,6 @@ function checkWin(currentClass) {
     let matchB
     let matchC
     let matchCounter = 0
-    // console.log(matchA)
     let everyResult = combination.every(index => {
       let containsResult = cellElements[index].classList.contains(currentClass)
       if (containsResult) {
@@ -148,10 +138,6 @@ function checkWin(currentClass) {
           matchC = index
 
           if (matchA !== undefined && matchB !== undefined && matchC !== undefined) {
-            // console.log('match!')
-            // console.log(matchA)
-            // console.log(matchB)
-            // console.log(matchC)
 
             cellElements[matchA].classList.add('match')
             cellElements[matchB].classList.add('match')
@@ -159,10 +145,6 @@ function checkWin(currentClass) {
 
             history[history.length-1] = board.innerHTML
           } else {
-            // console.log(matchA)
-            // console.log(matchB)
-            // console.log(matchC)
-            // console.log('cleared')
             matchA = undefined
             matchB = undefined
             matchC = undefined
