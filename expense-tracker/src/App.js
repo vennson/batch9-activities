@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import Expenses from './Expenses/Expenses'
 import Card from './UI/Card'
+import NewExpense from "./NewExpense/NewExpense";
 
 const DUMMY_EXPENSES = [
   {
@@ -28,20 +29,26 @@ const DUMMY_EXPENSES = [
 
 const App = () => {
   const [expenses, setExpenses] = useState(DUMMY_EXPENSES) 
-
-  const filterExpenses = (year) => {
-    if (year !== 'None') {
-      const filterResult = DUMMY_EXPENSES.filter(item => (item.date.getFullYear() === parseInt(year)))
-      console.log(filterResult)
-      setExpenses(filterResult)
-    } else {
-      setExpenses(DUMMY_EXPENSES)
-    }
+  const addExpenseHandler = (expense) => {
+    setExpenses((prevExpenses) => {
+      return [expense, ...prevExpenses]
+    })
   }
+
+  // const filterExpenses = (year) => {
+  //   if (year !== 'None') {
+  //     const filterResult = DUMMY_EXPENSES.filter(item => (item.date.getFullYear() === parseInt(year)))
+  //     console.log(filterResult)
+  //     setExpenses(filterResult)
+  //   } else {
+  //     setExpenses(DUMMY_EXPENSES)
+  //   }
+  // }
 
   return (
     <div className="App">
-      <Expenses expenses={expenses} onFilter={filterExpenses}/>
+      <NewExpense onAddExpense={addExpenseHandler}/>
+      <Expenses expenses={expenses}/>
     </div>
   )
 };
