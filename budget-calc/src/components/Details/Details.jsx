@@ -15,14 +15,9 @@ const Details = ({ title }) => {
       <CardContent className={classes.cardContent}>
         <Typography variant='h5'>${total}</Typography>
         <Doughnut 
-
           data={chartData}
           width={100}
           height={100}
-          // options={{ maintainAspectRatio: false, responsive: false }}
-          
-          // options={{responsive: true, maintainAspectRatio: true, radius: '100'}} 
-          // options={{radius: '100'}} 
         >
         </Doughnut>
       </CardContent>

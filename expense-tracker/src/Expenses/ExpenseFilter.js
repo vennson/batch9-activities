@@ -7,6 +7,7 @@ const ExpenseFilter = (props) => {
       <select 
         onChange={(e) => props.onChangeFilter(e.target.value)} 
         value={props.selected}
+        title='selectFilter'
       >
         <option value='2017'>2017</option>
         <option value='2018'>2018</option>

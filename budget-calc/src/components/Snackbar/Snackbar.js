@@ -18,7 +18,7 @@ const CustomizedSnackbar = ({ open, setOpen }) => {
       <Snackbar
         anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
         open={open}
-        autoHideDuration={3000}
+        autoHideDuration={5000}
         onClose={handleClose}
       >
         <MuiAlert onClose={handleClose} severity='success' elevation={6} variant='filled'>
